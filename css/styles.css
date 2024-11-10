@@ -1,39 +1,34 @@
 :root {
-  --iris: #4d5ae5;
-  --ocean: #404bbf;
-  --navy-blue: #2e2f42;
-  --green: #31d0aa;
-  --slate: #434455;
-  --light-slate: #8e8f99;
-  --cornflower: #e7e9fc;
-  --cloud: #f4f4fd;
-  --navy-blue-modal: rgba(46, 47, 66, 0.4);
-  --grey: rgba(46, 47, 66, 0.7);
-  --white: #fff;
-  --dairy: #fcfcfc;
-
   /* Fonts */
   --font-family: "Roboto", sans-serif;
-  }
-
-.list {
-  list-style: none;
+  --second-family: "Raleway", sans-serif;
+  /* Text colors */
+  --cloud-txt: #f4f4fd;
+  --iris-txt: #4d5ae5;
+  --slate-txt: #434455;
+  --light-slate-txt: #8e8f99;
+  --navy-blue-txt: #2e2f42;
+  --white-txt: #fff;
+  --ocean-txt: #404bbf;
+  /* BG colors */
+  --navy-blue-bg: #2e2f42;
+  --iris-bg: #4d5ae5;
+  --ocean-bg: #404bbf;
+  --cloud-bg: #f4f4fd;
+  --black-cl-15: rgba(0, 0, 0, 0.15);
+  /* Others */
+  
 }
 
-.link {
-  text-decoration: none;
-  color:currentColor;
-}
-
-body{
+body {
   font-family: var(--font-family);
-  color: var(--navy-blue);
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
+  color:var(--navy-blue-txt);
 }
 
-.visually-hidden {
+.hidden-title {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -42,172 +37,160 @@ body{
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  clip-path: inset(100%);
   margin: -1px;
 }
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
+  color: var(--white-txt);
 
-/* ==============HEADER============== */
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--ocean-bg);
+  box-shadow: 0 4px 4px 0 var(--black-cl-15);
+}
+
+/* reset styles */
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--second-family);
   font-weight: 800;
   font-size: 18px;
   line-height: calc(21 / 18);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--iris);
+  color: var(--iris-txt);
 }
 
-.header-logotip {
-  color: var(--navy-blue);
-}
-
-.header-link {
-  font-weight: 500;
-  color: var(--navy-blue);
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--ocean);
-}
-
-.header-contact-link {
-  color: var(--slate);
-}
-
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: var(--ocean);
-}
-/* ============/HEADER============ */
-
-/* ============HERO============== */
-.hero-section {
-  background-color: var(--navy-blue);
-}
-
-.hero-title {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: calc(60 / 56);
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--white);
-}
-
-.hero-button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(24 / 16);
-  letter-spacing: 0.04em;
-  color: var(--white);
-  cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: var(--iris);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: var(--ocean);
-}
-/* ============/Hero============ */
-
-/* ============FEATURES======== */
-.features-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height:calc(24 / 20) ;
-  letter-spacing: 0.02em;
-}
-
-.features-text {
-  color: var(--slate);
-}
-/* ============/FEATURES======== */
-
-/* ===========ABOUT=========== */
-.about-title {
-  font-weight: 700;
+.theme-title {
   font-size: 36px;
   line-height: calc(40 / 36);
-  letter-spacing: 0.02em;
   text-transform: capitalize;
-  text-align: center;
+  text-align: center; 
 }
-/* ===========/ABOUT=========== */
-
-/* ===========TEAM=========== */
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(40 / 36);
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-}
-
-.team-autor {
+.subject-title {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
-  letter-spacing: 0.02em;
+}
+  /* 
+  |==============================
+  | Header styles 
+  |==============================
+*/
+.header-logo {
+  color: var(--navy-blue-txt);
+}
+.header-link {
+  font-weight: 500;
+}
+.header-link:hover,
+.header-link:focus,
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--ocean-txt);
+}
+.header-contact {
+  color: var(--slate-txt);
+}
+/* 
+|==============================
+| Hero styles 
+|==============================
+*/
+.hero {
+  background-color: var(--navy-blue-bg);
+}
+.hero-title {
+  font-size: 56px;
+  line-height: calc(60 / 56);
   text-align: center;
+  color: var(--white-txt);
+}
+.hero-button {
+  background-color: var(--iris-bg);
+  box-shadow: 0 4px 4px 0 var(--black-cl-15);
 }
 
+/* 
+|==============================
+| Feature styles 
+|==============================
+*/
+.feature-text {
+  color: var(--slate-txt);
+}
+/* 
+|==============================
+| Doing styles 
+|==============================
+*/
+
+/* 
+|==============================
+| Team styles 
+|==============================
+*/
+.team-title-secondary {
+  text-align: center;
+}
 .team-text {
   text-align: center;
-  color: var(--slate);
+  color: var(--slate-txt);
 }
-/* ===========/TEAM=========== */
+/* 
+|==============================
+| Footer styles 
+|==============================
+*/
 
-/* ==========FOOTER========== */
 .footer {
-  background-color: var(--navy-blue);
+  background-color: var(--navy-blue-bg);
 }
 
-.footer-logotip {
-  color: var(--cloud);
+.footer-logo {
+  color: var(--cloud-txt);
 }
 
 .footer-text {
-  color: var(--cloud);
+  color: var(--cloud-txt);
 }
-/* ==============/FOOTER============== */
-
-
-/* ==========Portfolio======= */
-/* ==========Button========= */
-.button-primary {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(24 / 16);
-  letter-spacing: 0.04em;
+/* 
+|==============================
+| Button styles / Portfolio
+|==============================
+*/
+.button {
   text-align: center;
-  color: var(--iris);
-  cursor: pointer;
-  background-color: var(--cloud);
-}
+  color: var(--iris-txt); 
 
-.button-primary:hover,
-.button-primary:focus{
-  color: var(--white);
+  background-color: var(--cloud-bg);
+}
+.button:hover,
+.button:focus {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
-  background-color: var(--ocean);
-}
-/* ==========/Button========= */
-
-/* ========== Card =========*/
-.card-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: calc(24 / 20);
-  letter-spacing: 0.02em;
+  color: var(--white-txt);
 }
 
-.card-text {
-  color: var(--slate);
+/* 
 }
-/*=========== /Card ===========*/
-/* ==========/Portfolio======= */
+|==============================
+| Gallery styles / Portfolio
+|==============================
+*/
+.gallery-text {
+  color: var(--slate-txt);
+}
